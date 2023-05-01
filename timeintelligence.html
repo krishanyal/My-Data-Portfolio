@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Elements Reference - Massively by HTML5 UP</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Power BI Projects</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="SQL Projects.html">SQL Projects</a></li>
+            <li class="active"><a href="powerbi.html">Power BI Projects</a></li>
+            <li><a href="tableau.html">tableau Projects</a></li>
+            <li><a href="r.html">R Projects</a></li>
+            <li><a href="python.html">Python Projects</a></li>
+<!--            <li><a href="qlikview.html">Qlikview Projects</a></li>-->
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/krishany-al/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/krishanyal/My-Data-Portfolio" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main" class="main">
+        <header class="major">
+            <div class="image main">
+                <h2>Time Intelligence using DAX<br/>
+                    Furniture Sales</a></h2>
+            </div>
+        </header>
+        <embed src="images/Time Intelligence.pdf" type="application/pdf" width="100%" height="1300px"/>
+        <p><br>SalesFurniture - CALCULATE (sum(OrderBreakdown [Sales]), OrderBreakdown[Category]="Furniture")
+            <br>SalesTechnology - CALCULATE(sum(OrderBreakdown [Sales]), OrderBreakdown[Category]="Technology")
+            <br>SalesPrevMonth - CALCULATE([TotalSales], PREVIOUSMONTH(DatesMaster[Date]))
+            <br>SalesMOM DIVIDE ([TotalSales], [SalesPrevPeriod]) -1
+            <br>SalesPrevPeriod- CALCULATE([TotalSales], PARALLEL PERIOD (CatesMaster[Date], -1, MONTH))
+            <br>SalesPrevYear - CALCULATE([TotalSales), SAMEPERIODLASTYEAR(DatesMaster[Date]))
+            <br>SalesYTD - TOTALYTD([TotalSales],DatesMaster[Date])
+            <br>SalesYTDTech - TOTALYTD([TotalSales], DatesMaster[Date], OrderBreakdown [Category]="Technology")
+            <br>SalesYoY - DIVIDE([TotalSales],[SalesPrevYear]) -1
+            <br>SalesPrevYearYTD TOTALYTD([TotalSales], DATEADD(MasterDates [Date], -1, YEAR))</p>
+
+</body>
+</html>
